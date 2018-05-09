@@ -1,0 +1,36 @@
+﻿@model test2.Models.User
+@{
+    Layout = null;
+}
+
+@{
+    ViewBag.Title = "Sign in";
+}
+<head>
+    <title>sign in</title>
+    <style>
+        #button {
+            margin-left: 50px;
+            margin-top: 20px;
+            background-color: #0094ff;
+        }
+        #block1 {
+            margin-top: 10px;
+        }
+        #form-control {
+            background-color: #0094ff;
+        }
+    </style>
+</head>
+<body>
+    @using (Html.BeginForm())
+{
+    <div id="block1"> Email: @Html.TextBoxFor(model => model.email, new { @id = "form-control" })</div>
+
+    <div id="block1"> Password: @Html.PasswordFor(model => model.password, new { @id = "form-control" })</div>
+
+    <div><input id="button" type="submit" value="Sign in" /></div>
+}
+</body>
+
+

@@ -1,0 +1,40 @@
+﻿@{
+    Layout = null;
+}
+@{
+    ViewBag.Title = "Index";
+}
+@model test2.Models.User
+   
+<head>
+    <title>index</title>
+    <style>
+        div.wrapper {
+            width: 450px;
+        }
+        div.left_block {
+            float: left;
+            width: 200px;
+        }
+        div.right_block {
+            float: right;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="left_block">
+            Hello, @ViewData["firstName"] @ViewData["lastName"].
+        </div>
+        <div class="right_block">
+            @using (Html.BeginForm())
+            {
+                <input type="submit" value="Sign out" />
+            }
+        </div>
+    </div>
+
+
+</body>
+
